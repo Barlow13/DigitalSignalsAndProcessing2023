@@ -1,0 +1,4 @@
+[y,fs] = audioread("BirdSong.wav")
+MonoSig = y(:,1)
+sound(y,fs)
+spectrogram(y)

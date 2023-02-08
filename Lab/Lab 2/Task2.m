@@ -1,0 +1,14 @@
+clear all
+fs = 6;
+ts = 0:1/fs:1;
+xn = 3+cos(2*pi*2*ts) + 2*cos(2*pi*4*ts);
+figure(1);
+plot(ts,xn);
+figure(2);
+sincInterpolation(xn,fs,10)
+
+fs = 100; % sampling rate 100 samples per second
+t = 0:1/fs: 1; %100 samples interval is 0.01 second (1/fs)
+xsa = 3 + cos(2*pi*2*t)+2*cos(2*pi*4*t);
+figure(4);
+plot(t, xsa);

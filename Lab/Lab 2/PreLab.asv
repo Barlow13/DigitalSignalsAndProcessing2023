@@ -1,0 +1,15 @@
+clear all
+Fs = 8000;                                      % sampling frequency
+Wind = 0.1;                                     % time interval for calculating the Fourier transform (FT) is 0.1 seconds
+
+NumSampWind = Fs*Wind;                         % number of samples in the window for calculating the Fourier Transform
+
+t1 = 0:1/Fs:3;                                 
+t = 0:1/Fs:1;
+ZeroTime = zeros(1,length(t)-1);
+t2 = [ZeroTime t ZeroTime];
+Freq = [0:10:4000];
+
+Sig = 3*sin(2*pi*500*t1)+sin(2*pi*2000*t2);
+figure(1,"Name","Spectrogram")
+spectrogram(Sig,NumSampWind,64,Freq,Fs,'yaxis')
