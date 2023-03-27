@@ -1,0 +1,49 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../link6748e.cmd 
+
+ASM_SRCS += \
+../vectors.asm 
+
+C_SRCS += \
+../LCDK_Support_DSP.c \
+../main.c 
+
+C_DEPS += \
+./LCDK_Support_DSP.d \
+./main.d 
+
+OBJS += \
+./LCDK_Support_DSP.obj \
+./main.obj \
+./vectors.obj 
+
+ASM_DEPS += \
+./vectors.d 
+
+OBJS__QUOTED += \
+"LCDK_Support_DSP.obj" \
+"main.obj" \
+"vectors.obj" 
+
+C_DEPS__QUOTED += \
+"LCDK_Support_DSP.d" \
+"main.d" 
+
+ASM_DEPS__QUOTED += \
+"vectors.d" 
+
+C_SRCS__QUOTED += \
+"../LCDK_Support_DSP.c" \
+"../main.c" 
+
+ASM_SRCS__QUOTED += \
+"../vectors.asm" 
+
+

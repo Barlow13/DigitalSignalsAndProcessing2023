@@ -1,0 +1,38 @@
+
+**** Build of configuration Debug for project aq ****
+
+"C:\\ti\\ccs910\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+Building file: "../vectors.asm"
+Invoking: C6000 Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 --include_path="C:/Users/hoh150/Desktop/DSP_TH/Project1/myFirstProject/aq" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="vectors.d_raw"  "../vectors.asm"
+Finished building: "../vectors.asm"
+ 
+Building file: "../StartUp.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 --include_path="C:/Users/hoh150/Desktop/DSP_TH/Project1/myFirstProject/aq" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="StartUp.d_raw"  "../StartUp.c"
+Finished building: "../StartUp.c"
+ 
+Building file: "../ISRs.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 --include_path="C:/Users/hoh150/Desktop/DSP_TH/Project1/myFirstProject/aq" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="ISRs.d_raw"  "../ISRs.c"
+Finished building: "../ISRs.c"
+ 
+Building file: "../main.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 --include_path="C:/Users/hoh150/Desktop/DSP_TH/Project1/myFirstProject/aq" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../LCDK_Support_DSP.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 --include_path="C:/Users/hoh150/Desktop/DSP_TH/Project1/myFirstProject/aq" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.d_raw"  "../LCDK_Support_DSP.c"
+Finished building: "../LCDK_Support_DSP.c"
+ 
+Building target: "aq.out"
+Invoking: C6000 Linker
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/bin/cl6x" -mv6740 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"aq.map" -i"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/lib" -i"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-c6000_8.3.3/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="aq_linkInfo.xml" --rom_model -o "aq.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748e.cmd"  -llibc.a 
+<Linking>
+Finished building target: "aq.out"
+ 
+
+**** Build Finished ****
