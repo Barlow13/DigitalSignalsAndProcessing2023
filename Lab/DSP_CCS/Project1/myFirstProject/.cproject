@@ -69,7 +69,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="ISRs_WaveGeneratorLookup.c|ISRs_WaveGenerator.c|ISRs_Lab2.c|ISRs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ISRs_WaveGeneratorSawtooth.c|ISRs_WaveGeneratorLookup.c|ISRs_WaveGenerator.c|ISRs_Lab2.c|ISRs.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
