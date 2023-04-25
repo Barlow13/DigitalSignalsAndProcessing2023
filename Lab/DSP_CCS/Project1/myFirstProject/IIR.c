@@ -25,9 +25,8 @@ volatile union
 } CodecDataIn, CodecDataOut;
 
 /* add any global variables here */
-float x[4] = {0, 0, 0, 0};
-int i = 0;
-float h[4] = {.25, .25, .25, .25};
+float x[2] = {0,0};
+float y[2] = {0,0};
 
 interrupt void
 Codec_ISR()
@@ -44,7 +43,7 @@ Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
 {
     /* add any local variables here */
-    float y = 0;
+    float ycurr,xcurr;
 
     if (CheckForOverrun()) // overrun error occurred (i.e. halted DSP)
         return;            // so serial port is reset to recover
@@ -54,17 +53,15 @@ Codec_ISR()
     /* add your code starting here */
 
     // this example simply copies sample data from in to out
-    x[0] = CodecDataIn.Channel[RIGHT];
-    for (i = 0; i <= 3; i++)
-    {
-        y += x[i] * h[i];
-    }
-    for (i = 3; i > 0; i--)
-    {
-        x[i] = x[i - 1];
-    }
+xcurr = CodecDataIn.Channel[RIGHT];
 
-    CodecDataOut.Channel[RIGHT] = y;
+    ycurr = (-0.7 * y[1]) + xcurr + x[1]; // calculate current output using difference equation
+    y[1] = y[0];                       // shift y[0] to y[1]
+    y[0] = ycurr;
+    x[1] = x[0];                       // shift x[0] to x[1]
+    x[0] = xcurr;
+
+    CodecDataOut.Channel[RIGHT] = ycurr*.5;
 
     /* end your code here */
 
